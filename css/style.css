@@ -1,0 +1,1038 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    border-bottom: 1px solid #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 0;
+}
+  
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 40px;
+    gap: 20px;
+}
+    
+.nav-left{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.menu{
+    display:flex;
+    gap:50px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    justify-content:center;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.nav-right{
+    flex: 1 1 auto;
+    min-width: 0;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:20px;
+    }
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: thin;
+    font-size: 18px;
+}
+
+
+.menu li {
+    position: relative;
+}
+.menu li::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 22px;
+    background-color: #000;
+    opacity: 0.4;
+}
+.menu li:last-child::after {
+    display: none;
+}
+
+
+.profilikon {
+    width: 32px;
+    height: auto;
+}
+  
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
+.logga-hemsida {
+    width: auto;
+    height: 100px;
+    flex-shrink: 1;
+}
+
+.searchbar{
+    padding:10px 20px 10px 40px;
+    flex-shrink: 1;
+    width: 300px;
+    border:2px solid #000;
+    outline: none;
+    font-size:16px;
+    margin-left:20px;
+    min-width: 120px;
+    transition: all 0.2s ease;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.searchbar:focus {
+    border-color: #005fa3;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.hero {
+    display: flex;
+    gap: 0px;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+  
+.hero-video {
+    flex: 0 0 65%;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-row {
+    display: flex;
+}
+
+.newmoviebox {
+    border: 1px solid #000;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.newmoviebox p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.rating-icon {
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.rating-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #000;
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero-text {
+    flex: 0 0 35%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: white;
+    min-height: 450px;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.hero-text h5 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.movie-description {
+    font-family: "Fira Mono", monospace;
+}
+
+.divider-herotext {
+    flex-basis: 100%;
+    height: 2px;
+    margin: 5px 0 20px 0;
+    opacity: 0.5;
+    border-bottom: 2px dashed gray;
+}
+
+.hero-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: "Fira Mono", monospace;
+}
+
+.button-row {
+    display: flex;
+    margin-top: auto;
+}
+
+.buy-button {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid #000;
+    display: flex;
+    width: 400px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+.info-button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+}
+.info-button .infoicon {
+    width: 40px;
+    height: 40px;
+}
+
+.buy-button:hover {
+    background-color: #e1e1e1;
+}
+
+.buy-button:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+main {
+    margin: 40px;
+}
+
+main h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+main h6 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    font-family: "Fira Mono", monospace;
+    color: rgb(164, 164, 164);
+    font-weight: lighter;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.row-over-movies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll-movies {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow-box {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-box .arrowicon {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+.date-box {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid #000;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.arrow-box:hover {
+    background-color: #e1e1e1;
+}
+.arrow-box:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+.date-box:hover {
+    background-color: #e1e1e1;
+}
+.date-box:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+.divider {
+    flex-basis: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 5px 0 20px 0;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.movie-card {
+    position: relative;
+    flex: 0 1 300px;
+    border: 2px solid #000;
+    padding: 10px;
+    width: 360px;
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 1px solid #000;
+}
+
+.rating-small {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+
+    backdrop-filter: blur(2px);
+}
+.rating-icon-small {
+    border: 2px solid #000;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.rating-text-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #000;
+    border: 2px solid #000;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.movie-info h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    margin: 2px;
+}
+.time-genre-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.time-genre-row p {
+    font-size: 5px;
+    color: #6e6e6e;
+}
+.doticon {
+    height: 20px;
+    width: 20px;
+}
+.clockicon {
+    height: 15px;
+    width: 15px;
+    padding-right: 5px;
+    
+
+}
+
+.movie-info p {
+    font-family: "Fira Mono", monospace;
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.showtimes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.showtimes .showtime {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid #000;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #d8d8d8;
+}
+
+.showtime:hover {
+    background-color: #e1e1e1;
+}
+.showtime:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+.movie-calender-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nowlater-box {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid #000;
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.nowlater-box:hover {
+    background-color: #e1e1e1;
+}
+.nowlater-box:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+.calender-box {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calender-box:hover {
+    background-color: #e1e1e1;
+}
+.calender-box:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+.calender-box .calendericon {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+.filter-movies {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.genre-button {
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    width: 70px;
+    border: 2px solid #000;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.genre-button:hover {
+    background-color: #e1e1e1;
+}
+.genre-button:focus-visible {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+.filterbar {
+    width: 200px;
+    border:2px solid #000;
+    outline: none;
+    font-size:16px;
+    margin-left:20px;
+    min-width: 120px;
+    transition: all 0.2s ease;
+}
+
+.event-box {
+    display: flex;
+    border: 2px solid #000;
+    gap: 10px;
+    align-items: stretch;
+    
+}
+.event-poster {
+    height: auto;
+    width: 500px;
+    border-right: 2px solid #000;
+    object-fit: cover;
+}
+.event-text {
+    padding: 20px;
+}
+.event-text a {
+    text-decoration: none;
+    color: #000;
+    
+}
+.event-text a:hover {
+    text-decoration: underline;
+}
+
+.info-section {
+    
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.info-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.info-text {
+    flex: 1;
+    font-family: "Fira Mono", monospace;
+    border: 2px solid black;
+    padding: 20px;
+    height: 600px;
+    width: auto;
+    box-shadow: 6px 6px 0px black;
+}
+
+.info-image {
+    height: 610px;
+    width: auto;
+    border: 2px solid #000;
+    padding: 15px;
+}
+
+.staff-row {
+    display: flex;
+    gap: 50px; /* mellan cirklarna */
+    justify-content: center; /* centrerar raden */
+    flex-wrap: wrap; /* bryter rad på mindre skärmar */
+    margin: 20px 0;
+}
+
+.staff-circle {
+    width: 230px; /* större för text */
+    height: 230px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column; /* staplar texten vertikalt */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* centrerar texten */
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 6px 6px 0px black;
+}
+
+.staff-circle p {
+    margin: 2px 0; /* lite mellanrum mellan rader */
+    font-size: 15px; /* mindre text så den ryms */
+    line-height: 1.2;
+}
+
+.staff-name {
+    font-weight: bold;
+}
+.staff-role {
+    font-style: italic;
+}
+.staff-email {
+    font-size: 11px; /* mail lite mindre */
+    word-break: break-word; /* bryter långa mail */
+}
+
+.main-profile-page {
+    display: flex;
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    padding: 20px;
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.profile-box p {
+    font-size: 32px;
+}
+.points-box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: 'Inter', sans-serif;
+}
+.points-box {
+    display: flex;
+    border: 1px solid #000;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 201, 91);
+}
+
+.profile-buttonlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.profile-buttonlist button {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 12px 20px;
+    text-align: center;
+    width: 450px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #fff;
+    align-items: center;
+}
+
+.profile-buttonlist button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.profile-buttonlist button {
+    border-bottom: none;
+}
+/* Streck under listan */
+.manual-divider {
+    width: 494px;       /* samma som knapparna */
+    height: 2px;        /* tjocklek */
+    background-color: #000;
+    margin-top: 0;      /* justera avstånd till sista knappen */
+}
+
+.main-row {
+    display: flex;
+    gap: 30px;
+}
+
+.qr-code {
+    border: 2px solid #000;
+}
+
+.profile-main {
+    padding-left: 30px;
+}
+
+.movies-watched {
+    border: 2px solid #000;
+    height: 200px;
+    width: 200px;
+}
+.member-level {
+    border: 2px solid #000;
+    height: 200px;
+    width: 200px;
+}
+.circular-ring-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* mellan ring och texten under */
+}
+
+.circular-ring {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #e0e0e0; /* bakgrundsring */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fyllning av ringen med rotation */
+.circular-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 10px solid black; /* färg på framsteg */
+    clip: rect(0, 100px, 100px, 50px); /* visar halva ringen */
+    transform: rotate(48deg); /* 200/1500 = 13.33%, justera grader */
+    transform-origin: center;
+}
+
+/* texten i mitten av ringen */
+.ring-value {
+    position: absolute;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+
+.recent-activity {
+    border: 2px solid #000;
+    margin-top: 30px;
+    width: 1000px;
+    height: 500px;
+}
+
+.find-us {
+    display: flex;
+    justify-content: space-between;
+}
+.find-us-box {
+    display: flex;
+    border: 2px solid #000;
+    height: 570px;
+    width: 810px;
+    box-shadow: 10px 4px 0 #000;
+    align-items: center;
+    justify-content: flex-start;
+}
+.adress-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    font-size: 15px;
+    font-family: "Fira Mono", monospace;
+
+    
+}
+.list-icon-2 {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.adress-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.open-hours {
+    display: flex;
+    gap: 10px; /* mellan ikon och text */
+}
+
+.hours-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* mellan tiderna */
+}
+
+.open-hours img {
+    align-self: flex-start; /* ikon uppe i toppen */
+}
+
+.hours-text span {
+    display: block; /* säkerställer varje rad under varandra */
+}
+
+.map-box {
+    width: 700px;
+    height: 550px;
+    border: 2px solid #000;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.smafolketsbio-baner {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: #ee869f;
+    justify-content: center;
+    align-items: center;
+}
+.smafolketsbio-baner img {
+    height: 190px;
+    width: 100%;
+}
+.smafolketsbio-info {
+    border: 2px solid black;
+    padding: 20px;
+    font-family: "Fira Mono", monospace;
+}
+
+.table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+
+
+
+
+
+
+.site-footer {
+    border-top: 1px solid #000;
+    background-color: #f5f5f5;
+    padding: 40px 40px;
+    font-family: "Fira Mono", monospace;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.list-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links li span,
+.footer-links li a {
+    line-height: 1;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links li.list-header {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 12px;
+}
+
+.newsletter-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.newsletter-input {
+    padding: 8px 12px;
+    border: 3px solid #000;
+    width: 200px;
+}
+
+.newsletter-button {
+    padding: 8px 14px;
+    border: 3px solid #000;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.newsletter-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box img {
+    width: 20px;
+    height: 20px;
+}
+
+.site-footer > p {
+    font-size: 10px;
+    color: rgb(165, 165, 165);
+}
+
+.footer-divider {
+    flex-basis: 100%;
+    height: 2px;
+    margin: 5px 0 20px 0;
+    opacity: 0.5;
+    border-bottom: 2px dashed gray;
+}
+
