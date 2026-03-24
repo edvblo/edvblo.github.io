@@ -895,9 +895,56 @@ img {
     font-family: "Fira Mono", monospace;
 }
 
-.table {
+table {
     width: 100%;
-    overflow-x: auto;
+    max-width: 1450px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #1a1a1a;
+  }
+  
+  th {
+    background: #222;
+    color: var(--gold);
+    padding: 14px 8px;
+    font-size: 1.1rem;
+    border: 2px solid #333;
+    text-align: center;
+  }
+  
+  td {
+    border: 2px solid #333;
+    vertical-align: top;
+    padding: 12px;
+    min-height: 170px;
+    background: #ffffff;
+    transition: all 0.2s;
+  }
+  
+  td:hover {
+    border-color: var(--gold);
+    background: #252525;
+  }
+  
+  .date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #999;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  .movie {
+    background: rgba(33, 32, 32, 0.08);
+    border-left: 4px solid var(--gold);
+    padding: 9px 11px;
+    margin-bottom: 7px;
+    font-size: 0.97rem;
+  }
+  
+  .time {
+    font-size: 0.85rem;
+    color: #bbb;
     display: block;
   }
 
