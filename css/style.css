@@ -5,6 +5,10 @@
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 header {
@@ -40,6 +44,15 @@ header {
     flex: 1 1 auto;
     min-width: 0;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
 .nav-right{
     flex: 1 1 auto;
     min-width: 0;
@@ -124,6 +137,7 @@ header {
 }
 
 .hero-video video {
+    max-width: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -145,8 +159,10 @@ header {
 
 .newmoviebox p {
     color: #fff;
+    font-style: italic;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
 .rating {
@@ -185,11 +201,13 @@ header {
     border: 1px solid black;
     background-color: white;
     min-height: 450px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero-text h1 {
     font-size: 72px;
-    font-style: italic;
+    
     letter-spacing: 4px;
     line-height: 0.95;
 }
@@ -261,7 +279,8 @@ header {
 }
 
 .buy-button:hover {
-    background-color: #e1e1e1;
+    background-color: #fff;
+    color: #000;
 }
 
 .buy-button:focus-visible {
@@ -271,6 +290,7 @@ header {
 
 main {
     margin: 40px auto;
+    padding: 20px 20px;
     max-width: 1500px;
 }
 
@@ -332,14 +352,16 @@ img {
 }
 
 .arrow-box:hover {
-    background-color: #e1e1e1;
+    background-color: #000;
+    color: #fff;
 }
 .arrow-box:focus-visible {
     outline: 2px solid #005fa3;
     outline-offset: 2px;
 }
 .date-box:hover {
-    background-color: #e1e1e1;
+    background-color: #000;
+    color: #fff;
 }
 .date-box:focus-visible {
     outline: 2px solid #005fa3;
@@ -495,7 +517,8 @@ img {
     font-weight: bold;
 }
 .nowlater-box:hover {
-    background-color: #e1e1e1;
+    background-color: #000;
+    color: #fff;
 }
 .nowlater-box:focus-visible {
     outline: 2px solid #005fa3;
@@ -513,7 +536,8 @@ img {
     justify-content: center;
 }
 .calender-box:hover {
-    background-color: #e1e1e1;
+    background-color: #000;
+    color: #fff;
 }
 .calender-box:focus-visible {
     outline: 2px solid #005fa3;
@@ -544,7 +568,8 @@ img {
     font-weight: bold;
 }
 .genre-button:hover {
-    background-color: #e1e1e1;
+    background-color: #000;
+    color: #fff;
 }
 .genre-button:focus-visible {
     outline: 2px solid #005fa3;
@@ -568,6 +593,11 @@ img {
     align-items: stretch;
     
 }
+.event-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 #000;
+}
+
 .event-poster {
     height: auto;
     width: 500px;
@@ -622,24 +652,24 @@ img {
 
 .staff-row {
     display: flex;
-    gap: 50px; /* mellan cirklarna */
-    justify-content: center; /* centrerar raden */
-    flex-wrap: wrap; /* bryter rad på mindre skärmar */
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 20px 0;
 }
 
 .staff-circle {
-    width: 230px; /* större för text */
+    width: 230px;
     height: 230px;
     background-color: white;
     color: black;
     border-radius: 50%;
     border: 3px solid black;
     display: flex;
-    flex-direction: column; /* staplar texten vertikalt */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* centrerar texten */
+    text-align: center;
     padding: 10px;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
@@ -647,8 +677,8 @@ img {
 }
 
 .staff-circle p {
-    margin: 2px 0; /* lite mellanrum mellan rader */
-    font-size: 15px; /* mindre text så den ryms */
+    margin: 2px 0;
+    font-size: 15px;
     line-height: 1.2;
 }
 
@@ -659,8 +689,8 @@ img {
     font-style: italic;
 }
 .staff-email {
-    font-size: 11px; /* mail lite mindre */
-    word-break: break-word; /* bryter långa mail */
+    font-size: 11px;
+    word-break: break-word;
 }
 
 .main-profile-page {
@@ -739,12 +769,12 @@ img {
 .profile-buttonlist button {
     border-bottom: none;
 }
-/* Streck under listan */
+
 .manual-divider {
-    width: 494px;       /* samma som knapparna */
-    height: 2px;        /* tjocklek */
+    width: 494px;
+    height: 2px;
     background-color: #000;
-    margin-top: 0;      /* justera avstånd till sista knappen */
+    margin-top: 0;
 }
 
 .main-row {
@@ -774,7 +804,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* mellan ring och texten under */
+    gap: 10px;
 }
 
 .circular-ring {
@@ -782,25 +812,23 @@ img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 10px solid #e0e0e0; /* bakgrundsring */
+    border: 10px solid #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* fyllning av ringen med rotation */
 .circular-ring::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 10px solid black; /* färg på framsteg */
-    clip: rect(0, 100px, 100px, 50px); /* visar halva ringen */
-    transform: rotate(48deg); /* 200/1500 = 13.33%, justera grader */
+    border: 10px solid black;
+    clip: rect(0, 100px, 100px, 50px);
+    transform: rotate(48deg);
     transform-origin: center;
 }
 
-/* texten i mitten av ringen */
 .ring-value {
     position: absolute;
     font-weight: bold;
@@ -855,21 +883,21 @@ img {
 
 .open-hours {
     display: flex;
-    gap: 10px; /* mellan ikon och text */
+    gap: 10px;
 }
 
 .hours-text {
     display: flex;
     flex-direction: column;
-    gap: 2px; /* mellan tiderna */
+    gap: 2px;
 }
 
 .open-hours img {
-    align-self: flex-start; /* ikon uppe i toppen */
+    align-self: flex-start;
 }
 
 .hours-text span {
-    display: block; /* säkerställer varje rad under varandra */
+    display: block;
 }
 
 .map-box {
@@ -995,6 +1023,7 @@ table {
 .footer-content {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 150px;
 }
 
@@ -1113,3 +1142,44 @@ table {
     border-bottom: 2px dashed gray;
 }
 
+@media (max-width: 885px) {
+    .movie-card {
+        width: 100%;
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .hero-video, .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #000;
+        border-radius: 2px;
+    }
+    .profilikon {
+        display: none;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        font-size: large;
+    }
+}
