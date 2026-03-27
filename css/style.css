@@ -617,7 +617,6 @@ img {
 }
 
 .info-section {
-    
     margin: 0 auto;
     padding: 40px;
 }
@@ -629,25 +628,28 @@ img {
 
 .info-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 40px;
 }
 
 .info-text {
     flex: 1;
     font-family: "Fira Mono", monospace;
+    font-size: 15px;
     border: 2px solid black;
     padding: 20px;
-    height: 600px;
-    width: auto;
+    height: 550px;
+    width: 700px;
     box-shadow: 6px 6px 0px black;
 }
 
 .info-image {
-    height: 610px;
-    width: auto;
+    height: 560px;
+    width: 700px;
     border: 2px solid #000;
     padding: 15px;
+    align-self: stretch;
 }
 
 .staff-row {
@@ -852,10 +854,13 @@ img {
     display: flex;
     border: 2px solid #000;
     height: 570px;
-    width: 810px;
+    width: 100%;
+    max-width: 810px;
     box-shadow: 10px 4px 0 #000;
     align-items: center;
     justify-content: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
 }
 .adress-info {
     display: flex;
@@ -863,11 +868,12 @@ img {
     gap: 15px;
     list-style: none;
     margin: 0;
-    padding: 15px;
+    padding: 0;
     font-size: 15px;
-    font-family: "Fira Mono", monospace;
-
-    
+    font-family: "Fira Mono", monospace; 
+    flex: 1 1 0;
+    min-width: 0;
+    word-wrap: break-word;
 }
 .list-icon-2 {
     width: 20px;
@@ -901,7 +907,7 @@ img {
 }
 
 .map-box {
-    width: 700px;
+    width: 600px;
     height: 550px;
     border: 2px solid #000;
     overflow: hidden;
@@ -1142,7 +1148,7 @@ table {
     border-bottom: 2px dashed gray;
 }
 
-@media (max-width: 885px) {
+@media (max-width: 900px) {
     .movie-card {
         width: 100%;
     }
@@ -1174,6 +1180,28 @@ table {
     }
     .profilikon {
         display: none;
+    }
+    .event-box {
+        flex-direction: column;
+    }
+    .event-poster {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid black;
+        display: block;
+    }
+    .find-us {
+        flex-direction: column;
+    }
+    
+    .map-box {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .info-content {
+        flex-direction: column;
     }
     .footer-content {
         flex-direction: column;
