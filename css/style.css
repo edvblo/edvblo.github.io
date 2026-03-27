@@ -710,6 +710,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    background-color: #eae9e9;
 }
 .profile-box p {
     font-size: 32px;
@@ -793,14 +794,33 @@ img {
 }
 
 .movies-watched {
+    display: flex;
+    flex-direction: column;
     border: 2px solid #000;
     height: 200px;
     width: 200px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    font-family: "Fira Mono", monospace;
+    
+}
+.movies-watched p {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 .member-level {
     border: 2px solid #000;
     height: 200px;
     width: 200px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    font-family: "Fira Mono", monospace;
 }
 .circular-ring-wrapper {
     display: flex;
@@ -825,7 +845,7 @@ img {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 10px solid black;
+    border: 10px solid rgb(131, 170, 238);
     clip: rect(0, 100px, 100px, 50px);
     transform: rotate(48deg);
     transform-origin: center;
@@ -835,8 +855,9 @@ img {
     position: absolute;
     font-weight: bold;
     font-size: 14px;
-    color: #000;
+    color: white;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .recent-activity {
@@ -844,6 +865,11 @@ img {
     margin-top: 30px;
     width: 1000px;
     height: 500px;
+}
+.activity {
+    border-bottom: 1px solid black;
+    margin: 20px;
+    padding: 4px;
 }
 
 .find-us {
