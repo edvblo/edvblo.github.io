@@ -1,195 +1,250 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Folkets Bio">
-    <title>Folkets Bio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="calender-page">
-    <header>
-        <nav class="navbar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Folkets Bio">
+        <title>Folkets Bio</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-            <div class="nav-left">
-            <a href="index.html">
-            <img src="images/folketsbio-logga.png" alt="Folkets Bio logga" class="logga-hemsida">
-            </a>
-            </div>
-            
-            <ul class="menu">
-            <li><a href="filmer.html">Filmer</a></li>
-            <li><a href="event.html">Evenemang</a></li>
-            <li><a href="smafolketsbio.html">Barn & Ungdom</a></li>
-            <li><a href="om-oss.html">Om oss</a></li>
-            <li><a href="hitta-oss.html">Hitta oss</a></li>
-            </ul>
-            
-            <div class="nav-right">
-            
-            <input type="search" placeholder="Sök" class="searchbar">
-            
-            <a href="profil.html">
-            <img src="images/icons/user-regular-full.svg" class="profilikon">
-            </a>
-            </div>
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-            
+    <body class="calender-page">
+        <header>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="index.html">
+                        <img
+                        src="images/folketsbio-logga.png"
+                        alt="Folkets Bio logga"
+                        class="logga-hemsida"
+                        >
+                    </a>
+                </div>
+
+                <ul class="menu">
+                    <li><a href="filmer.html">Filmer</a></li>
+                    <li><a href="event.html">Evenemang</a></li>
+                    <li><a href="smafolketsbio.html">Barn &amp; Ungdom</a></li>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="hitta-oss.html">Hitta oss</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <form role="search" class="search-form">
+                        <label for="site-search" class="visually-hidden">
+                            Sök allt på sidan
+                        </label>
+                        <input
+                            type="search"
+                            id="site-search"
+                            class="searchbar"
+                            placeholder="Sök"
+                        >
+                    </form>
+
+                    <a href="profil.html" aria-label="Profil">
+                        <img
+                        src="images/icons/user-regular-full.svg"
+                        class="profilikon"
+                        alt="profil"
+                        >
+                    </a>
+
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </nav>
-    </header>
+        </header>
 
-    <main>
-        <h1>KALENDER</h1>
-        <br>
-        <div class="divider"></div>
-        <table>
-            <thead>
-              <tr>
-                <th>IDAG</th>
-                <th>IMORGON</th>
-                <th>ONSDAG</th>
-                <th>TORSDAG</th>
-                <th>FREDAG</th>
-                <th>LÖRDAG</th>
-                <th>SÖNDAG</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="date">29</div>
-                  <div class="movie"><span class="time">13:30</span> Franz K.</div>
-                  <div class="movie"><span class="time">14:45</span> I Swear</div>
-                  <div class="movie"><span class="time">17:15</span> Celtic Utopia</div>
-                  <div class="movie"><span class="time">19:00</span> Mecenaten</div>
-                  <div class="movie"><span class="time">19:00</span> Sirât</div>
-                </td>
-                <td>
-                  <div class="date">30</div>
-                  <div class="movie"><span class="time">15:15</span> Franz K.</div>
-                  <div class="movie"><span class="time">15:15</span> Unga mödrar <span class="special">(sista)</span></div>
-                  <div class="movie"><span class="time">17:30</span> Två åklagare</div>
-                  <div class="movie"><span class="time">17:45</span> Sarah Bernhardt, la divine</div>
-                  <div class="movie"><span class="time">20:00</span> Doktor Glas <span class="special">(sista)</span></div>
-                  <div class="movie"><span class="time">20:00</span> I Swear</div>
-                </td>
-                <td>
-                  <div class="date">31</div>
-                  <div class="movie"><span class="time">13:00</span> Sentimental Value <span class="oscar">(Oscarsvinnare)</span></div>
-                  <div class="movie"><span class="time">15:30</span> Begynnelser</div>
-                  <div class="movie"><span class="time">16:00</span> Amrum <span class="special">(kort tid kvar)</span></div>
-                  <div class="movie"><span class="time">17:30</span> Hamnet</div>
-                  <div class="movie"><span class="time">18:00</span> Celtic Utopia</div>
-                  <div class="movie"><span class="time">20:00</span> Mecenaten</div>
-                  <div class="movie"><span class="time">20:00</span> Sirât</div>
-                </td>
-                <td>
-                  <div class="date">1</div>
-                  <div class="movie"><span class="time">13:00</span> Två åklagare</div>
-                  <div class="movie"><span class="time">13:15</span> Amrum <span class="special">(kort tid kvar)</span></div>
-                  <div class="movie"><span class="time">15:15</span> I Swear</div>
-                  <div class="movie"><span class="time">15:15</span> Romería <span class="special">(kort tid kvar)</span></div>
-                  <div class="movie"><span class="time">17:30</span> Franz K.</div>
-                  <div class="movie"><span class="time">17:45</span> Sirât</div>
-                  <div class="movie"><span class="time">20:00</span> Celtic Utopia</div>
-                  <div class="movie"><span class="time">20:00</span> The Drama <span class="special">(premiär)</span></div>
-                </td>
-                <td>
-                  <div class="date">2</div>
-                  <div class="movie"><span class="time">13:00</span> Franz K.</div>
-                  <div class="movie"><span class="time">13:00</span> Romería <span class="special">(kort tid kvar)</span></div>
-                  <div class="movie"><span class="time">15:15</span> Begynnelser</div>
-                  <div class="movie"><span class="time">15:30</span> Celtic Utopia</div>
-                  <div class="movie"><span class="time">17:15</span> The Testament of Ann Lee</div>
-                  <div class="movie"><span class="time">17:30</span> The Drama</div>
-                  <div class="movie"><span class="time">20:00</span> Mecenaten</div>
-                </td>
-                <td>
-                  <div class="date">3</div>
-                  <div class="movie"><span class="time">—</span> Kommande premiärer</div>
-                </td>
-                <td>
-                  <div class="date">4</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-    </main>
-
-    <br>
-    <br>
-    <footer class="site-footer">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="images/folketsbio-logga.png" alt="Folkets Bio" class="footer-logo">
-            <p>Kvalitativa filmer för 
-                barn och vuxna sedan 1973</p>
-          </div>
-          <div class="utforska">
-            <ul class="footer-links">
-                <li class="list-header">UTFORSKA</li>
-                <li><a href="filmer.html">Filmer</a></li>
-                <li><a href="event.html">Event</a></li>
-                <li><a href="kalender.html">Kalender</a></li>
-                <li><a href="tillgänglighet.html">Tillgänglighet</a></li>
-                <li><a href="hitta-oss.html">Hitta oss</a></li>
-                <li><a href="om-oss.html">Om oss</a></li>
-            </ul>
-          </div>
-          <div class="gemenskap">
-            <ul class="footer-links">
-                <li class="list-header">GEMENSKAP</li>
-                <li><a href="">Medlemsklubb</a></li>
-                <li><a href="smafolketsbio.html">Knattebio</a></li>
-                <li><a href="">Skolbio</a></li>
-                <li><a href="">Presentkort</a></li>
-            </ul>
-          </div>
-          <div class="kontakt">
-            <ul class="footer-links">
-                <li class="list-header">KONTAKT</li>
-                <li>
-                    <img src="images/icons/location-pin-alt-1-svgrepo-com.svg" class="list-icon">
-                    <span>Västra Strandgatan 8A, Umeå</span>
-                </li>
-                <li>
-                    <img src="images/icons/telephone-call-telephone-svgrepo-com.svg" class="list-icon">
-                    <span>0727-13 43 40</span>
-                </li>
-                <li>
-                    <img src="images/icons/mail-svgrepo-com.svg" class="list-icon">
-                    <span>info@folketsbioumea.se</span>
-                </li>
-            </ul>
-          </div>
-          <li class="newsletter">
-    
-            <span class="newsletter-title">NYHETSBREV</span>
+        <main>
+            <h1>KALENDER</h1>
             <br>
-            <div class="newsletter-form">
-                <input
-                    type="email"
-                    placeholder="Din emailadress"
-                    class="newsletter-input"
-                >
-                <button class="newsletter-button">ANMÄL</button>
+            <div class="divider"></div>
+            <table>
+                <thead>
+                <tr>
+                    <th>IDAG</th>
+                    <th>IMORGON</th>
+                    <th>ONSDAG</th>
+                    <th>TORSDAG</th>
+                    <th>FREDAG</th>
+                    <th>LÖRDAG</th>
+                    <th>SÖNDAG</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                    <div class="date">29</div>
+                    <div class="movie"><span class="time">13:30</span> Franz K.</div>
+                    <div class="movie"><span class="time">14:45</span> I Swear</div>
+                    <div class="movie"><span class="time">17:15</span> Celtic Utopia</div>
+                    <div class="movie"><span class="time">19:00</span> Mecenaten</div>
+                    <div class="movie"><span class="time">19:00</span> Sirât</div>
+                    </td>
+
+                    <td>
+                    <div class="date">30</div>
+                    <div class="movie"><span class="time">15:15</span> Franz K.</div>
+                    <div class="movie">
+                        <span class="time">15:15</span> Unga mödrar
+                        <span class="special">(sista)</span>
+                    </div>
+                    <div class="movie"><span class="time">17:30</span> Två åklagare</div>
+                    <div class="movie"><span class="time">17:45</span> Sarah Bernhardt, la divine</div>
+                    <div class="movie">
+                        <span class="time">20:00</span> Doktor Glas
+                        <span class="special">(sista)</span>
+                    </div>
+                    <div class="movie"><span class="time">20:00</span> I Swear</div>
+                    </td>
+
+                    <td>
+                    <div class="date">31</div>
+                    <div class="movie">
+                        <span class="time">13:00</span> Sentimental Value
+                        <span class="oscar">(Oscarsvinnare)</span>
+                    </div>
+                    <div class="movie"><span class="time">15:30</span> Begynnelser</div>
+                    <div class="movie">
+                        <span class="time">16:00</span> Amrum
+                        <span class="special">(kort tid kvar)</span>
+                    </div>
+                    <div class="movie"><span class="time">17:30</span> Hamnet</div>
+                    <div class="movie"><span class="time">18:00</span> Celtic Utopia</div>
+                    <div class="movie"><span class="time">20:00</span> Mecenaten</div>
+                    <div class="movie"><span class="time">20:00</span> Sirât</div>
+                    </td>
+
+                    <td>
+                    <div class="date">1</div>
+                    <div class="movie"><span class="time">13:00</span> Två åklagare</div>
+                    <div class="movie">
+                        <span class="time">13:15</span> Amrum
+                        <span class="special">(kort tid kvar)</span>
+                    </div>
+                    <div class="movie"><span class="time">15:15</span> I Swear</div>
+                    <div class="movie">
+                        <span class="time">15:15</span> Romería
+                        <span class="special">(kort tid kvar)</span>
+                    </div>
+                    <div class="movie"><span class="time">17:30</span> Franz K.</div>
+                    <div class="movie"><span class="time">17:45</span> Sirât</div>
+                    <div class="movie"><span class="time">20:00</span> Celtic Utopia</div>
+                    <div class="movie">
+                        <span class="time">20:00</span> The Drama
+                        <span class="special">(premiär)</span>
+                    </div>
+                    </td>
+
+                    <td>
+                    <div class="date">2</div>
+                    <div class="movie"><span class="time">13:00</span> Franz K.</div>
+                    <div class="movie">
+                        <span class="time">13:00</span> Romería
+                        <span class="special">(kort tid kvar)</span>
+                    </div>
+                    <div class="movie"><span class="time">15:15</span> Begynnelser</div>
+                    <div class="movie"><span class="time">15:30</span> Celtic Utopia</div>
+                    <div class="movie"><span class="time">17:15</span> The Testament of Ann Lee</div>
+                    <div class="movie"><span class="time">17:30</span> The Drama</div>
+                    <div class="movie"><span class="time">20:00</span> Mecenaten</div>
+                    </td>
+
+                    <td>
+                    <div class="date">3</div>
+                    <div class="movie"><span class="time">—</span> Kommande premiärer</div>
+                    </td>
+
+                    <td>
+                    <div class="date">4</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img
+                        src="images/folketsbio-logga.png"
+                        alt="Folkets Bio"
+                        class="footer-logo"
+                    >
+                    <p>Kvalitativa filmer för barn och vuxna sedan 1973</p>
+                </div>
+
+                <div class="utforska">
+                    <ul class="footer-links">
+                        <li class="list-header">UTFORSKA</li>
+                        <li><a href="filmer.html">Filmer</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="kalender.html">Kalender</a></li>
+                        <li><a href="tillgänglighet.html">Tillgänglighet</a></li>
+                        <li><a href="hitta-oss.html">Hitta oss</a></li>
+                        <li><a href="om-oss.html">Om oss</a></li>
+                    </ul>
+                </div>
+
+                <div class="gemenskap">
+                    <ul class="footer-links">
+                        <li class="list-header">GEMENSKAP</li>
+                        <li><a href="">Medlemsklubb</a></li>
+                        <li><a href="smafolketsbio.html">Knattebio</a></li>
+                        <li><a href="">Skolbio</a></li>
+                        <li><a href="">Presentkort</a></li>
+                    </ul>
+                </div>
+
+                <div class="kontakt">
+                    <ul class="footer-links">
+                        <li class="list-header">KONTAKT</li>
+                        <li>
+                        <img src="images/icons/location-pin-alt-1-svgrepo-com.svg" class="list-icon">
+                        <span>Västra Strandgatan 8A, Umeå</span>
+                        </li>
+                        <li>
+                        <img src="images/icons/telephone-call-telephone-svgrepo-com.svg" class="list-icon">
+                        <span>0727-13 43 40</span>
+                        </li>
+                        <li>
+                        <img src="images/icons/mail-svgrepo-com.svg" class="list-icon">
+                        <span>info@folketsbioumea.se</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="newsletter">
+                    <span class="newsletter-title">NYHETSBREV</span>
+                    <br>
+
+                    <div class="newsletter-form">
+                        <input
+                        type="email"
+                        placeholder="Din emailadress"
+                        class="newsletter-input"
+                        >
+                        <button class="newsletter-button">ANMÄL</button>
+                    </div>
+
+                    <div class="newsletter-icons">
+                        <a href="https://www.facebook.com/folketsbioumea" class="icon-box">
+                            <img src="images/icons/facebook-svgrepo-com.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/folketsbioumea" class="icon-box">
+                            <img src="images/icons/instagram-167-svgrepo-com.svg" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
             </div>
-        
-            <div class="newsletter-icons">
-              <div class="newsletter-icons">
-                <a href="https://www.facebook.com/folketsbioumea" class="icon-box"><img src="images/icons/facebook-svgrepo-com.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/folketsbioumea" class="icon-box"><img src="images/icons/instagram-167-svgrepo-com.svg" alt="Instagram"></a>
-            </div>
-            </div>
-        
-        </li>
-        </div>
-        <div class="footer-divider"></div>
-        <p>© 2026 Folkets Bio Umeå     Drivs med Kinoplex</p>
-      </footer>
-</body>
+
+            <div class="footer-divider"></div>
+            <p>© 2026 Folkets Bio Umeå – Drivs med Kinoplex</p>
+        </footer>
+    </body>
 </html>
