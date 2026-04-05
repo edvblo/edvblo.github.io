@@ -136,7 +136,7 @@
             <div class="divider"></div>
 
             <div class="movie-card">
-                <img src="images/isthisthingon.jpeg" alt="Is This Thing On?" class="movie-poster" onclick="showInfo('movie1')">
+                <img src="images/isthisthingon.jpeg" alt="Is This Thing On?" class="movie-poster" onclick="openPopup('movie1')">
                 <div class="rating-small">
                     <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
                     <div class="rating-text-small">
@@ -145,7 +145,7 @@
                 </div>
                 <br>
                 <div class="movie-info">
-                    <h3 onclick="showInfo('movie1')">Is This Thing On?</h3>
+                    <h3 onclick="openPopup('movie1')">Is This Thing On?</h3>
                     <div class="time-genre-row">
                         <p>Komedi/Drama</p>
                         <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
@@ -163,9 +163,13 @@
                     <button class="showtime"><p>17:30</p></button>
                     <button class="showtime"><p>20:00</p></button>
                 </div>
-                <div id="movie1" class="movie-info-js" style="display:none;">
-                    <p>Mer information om filmen här...</p>
-                </div>
+                <div id="movie1" class="popup" style="display:none;">
+                    <div class="popup-content">
+                      <span class="close" onclick="closePopup('movie1')">&times;</span>
+                      <h3>Franz K.</h3>
+                      <p>Här är lite information om filmen...</p>
+                    </div>
+                  </div>
                 
             </div>
         

@@ -2,7 +2,10 @@ function showMessage() {
     alert("Hello, JavaScript!");
 }
 
-function showInfo(id) {
-    const info = document.getElementById(id);
-    info.style.display = info.style.display === "none" ? "block" : "none";
-  }
+function openPopup(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+  
+function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+}
