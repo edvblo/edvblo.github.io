@@ -1269,18 +1269,34 @@ td:hover {
     border-bottom: 2px dashed gray;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1020px) {
+
+    * {
+        box-sizing: border-box;
+    }
     .movie-card {
         width: 100%;
     }
+    .movie-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .hero {
         flex-direction: column;
+    }
+    .hero h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        word-break: break-word;
     }
     .hero-video, .hero-text {
         width: 100%;
         max-width: 100%;
     }
     .menu {
+        display: none;
+    }
+    .search-form {
         display: none;
     }
     .hamburger {
@@ -1301,6 +1317,9 @@ td:hover {
     }
     .profilikon {
         display: none;
+    }
+    .showtimes {
+        flex-wrap: wrap;
     }
     .event-box {
         flex-direction: column;
@@ -1334,7 +1353,7 @@ td:hover {
 }
 
 @media print {
-    
+
     nav,
     .menu,
     header,
@@ -1346,6 +1365,7 @@ td:hover {
       font-family: Georgia, serif;
       color: black;
       background: white;
+      margin: 0;
     }
   
     * {
