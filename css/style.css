@@ -1320,15 +1320,19 @@ td:hover {
     }
     .date-box,
     .arrow-box {
-        padding: 6px 10px;
-        font-size: 0.8rem;
+        flex: 1;
+        min-width: 0;
+        padding: 6px 8px;
+        font-size: 0.75rem;
     }
     .row-over-movies h6 {
         font-size: 0.9rem;
     }
     .scroll-movies {
+        display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow: hidden;
+        justify-content: space-between;
     }
     .event-box {
         flex-direction: column;
