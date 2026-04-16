@@ -1318,8 +1318,17 @@ td:hover {
     .profilikon {
         display: none;
     }
-    .showtimes {
-        flex-wrap: wrap;
+    .date-box,
+    .arrow-box {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    .row-over-movies h6 {
+        font-size: 0.9rem;
+    }
+    .scroll-movies {
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
     .event-box {
         flex-direction: column;
