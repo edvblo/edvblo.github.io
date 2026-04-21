@@ -154,6 +154,15 @@ header {
     height: 100%;
     object-fit: cover;
 }
+video::cue {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 10px;
+    border-radius: 6px;
+    line-height: 1.4;
+  }
 
 .top-row {
     display: flex;
