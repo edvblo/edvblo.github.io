@@ -67,7 +67,6 @@
                     kind="subtitles"
                     srclang="sv"
                     label="Svenska"
-                    default
                 >
                 <track
                     src="media/hamnet-text-en.vtt"
@@ -333,14 +332,29 @@
     
             <span class="newsletter-title">NYHETSBREV</span>
             <br>
-            <div class="newsletter-form">
+            <form
+                class="newsletter-form"
+                action="mailto:exempel@domän.se"
+                method="post"
+                enctype="text/plain"
+                >
+                <label for="newsletter-email" class="visually-hidden">
+                    E-postadress
+                </label>
+
                 <input
                     type="email"
-                    placeholder="Din emailadress"
+                    id="newsletter-email"
+                    name="email"
+                    placeholder="Din e-postadress"
                     class="newsletter-input"
+                    required
                 >
-                <button class="newsletter-button">ANMÄL</button>
-            </div>
+
+                <button type="submit" class="newsletter-button">
+                    ANMÄL
+                </button>
+            </form>
         
             <div class="newsletter-icons">
                 <div class="newsletter-icons">
