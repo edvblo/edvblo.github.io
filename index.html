@@ -6,7 +6,7 @@
     <meta name="description" content="Folkets Bio">
     <title>Folkets Bio</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body class="page-home">
     <header>
@@ -133,149 +133,387 @@
         <div class="row-over-movies">
             <h6>Välj en film för att boka biljetter</h6>
             <div class="scroll-movies">
-                <button class="arrow-box">
+                <button type="button" class="arrow-box" onclick="moveLeft()">
                     <img src="images/icons/arrow-left4-svgrepo-com.svg" alt="arrow" class="arrowicon">
                 </button>
                 <button class="date-box">IDAG</button>
                 <button class="date-box">IMORGON</button>
                 <button class="date-box">10 MARS</button>
-                <button class="arrow-box">
+                <button type="button" class="arrow-box" onclick="moveRight()">
                     <img src="images/icons/arrow-right4-svgrepo-com.svg" alt="arrow" class="arrowicon">
                 </button>
             </div>
         </div>
         <br>
-        <div class="movie-container">
+        <div class="movie-container-onerow">
 
             <div class="divider"></div>
 
-            <div class="movie-card">
-                <img src="images/isthisthingon.jpeg" alt="Is This Thing On?" class="movie-poster" onclick="openPopup('movie1')">
-                <div class="rating-small">
-                    <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
-                    <div class="rating-text-small">
-                        <p>7.9</p>
-                    </div>
-                </div>
-                <br>
-                <div class="movie-info">
-                    <h3 onclick="openPopup('movie1')">Is This Thing On?</h3>
-                    <div class="time-genre-row">
-                        <p>Komedi/Drama</p>
-                        <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
-                        <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
-                        <p>2 tim 10 min</p>
+            <div class="movie-scroll" id="movieRow">
+                <div class="movie-card">
+                    <img src="images/isthisthingon.jpeg" alt="Is This Thing On?" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
                     </div>
                     <br>
-                    <p>Premiär: 27 Feb 2026</p>
-                    <p>Land: USA</p>
-                    <p>Språk: Engelska</p>
-                </div>
-                <br>
-                <div class="showtimes">
-                    <button class="showtime"><p>14:00</p></button>
-                    <button class="showtime"><p>17:30</p></button>
-                    <button class="showtime"><p>20:00</p></button>
-                </div>
-                
-            </div>
-            <div id="movie1" class="popup" style="display:none;">
-                <div class="popup-content">
-                  <span class="close" onclick="closePopup('movie1')">&times;</span>
-                  <h3>Franz K.</h3>
-                  <p>Här är lite information om filmen...</p>
-                </div>
-            </div>
-        
-            <div class="movie-card">
-                <img src="images/sirat.jpg" alt="Sîrat" class="movie-poster">
-                <div class="rating-small">
-                    <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
-                    <div class="rating-text-small">
-                        <p>7.9</p>
-                    </div>
-                </div>
-                <br>
-                <div class="movie-info">
-                    <h3>Sîrat</h3>
-                    <div class="time-genre-row">
-                        <p>Komedi/Drama</p>
-                        <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
-                        <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
-                        <p>2 tim 10 min</p>
+                    <div class="movie-info">
+                        <h3>Is This Thing On?</h3>
+                        <div class="time-genre-row">
+                            <p>Komedi/Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>2 tim 1 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 27 Feb 2026</p>
+                        <p>Land: USA</p>
+                        <p>Språk: Engelska</p>
                     </div>
                     <br>
-                    <p>Premiär: 6 Mars 2026</p>
-                    <p>Land: Frankrike/Spanien</p>
-                    <p>Genre: Drama</p>
-                </div>
-                <br>
-                <div class="showtimes">
-                    <button class="showtime"><p>14:00</p></button>
-                    <button class="showtime"><p>17:30</p></button>
-                    <button class="showtime"><p>20:00</p></button>
-                </div>
-            </div>
-        
-            <div class="movie-card">
-                <img src="images/ungamodrar.jpg" alt="Unga Mödrar" class="movie-poster">
-                <div class="rating-small">
-                    <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
-                    <div class="rating-text-small">
-                        <p>7.9</p>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
                     </div>
+                    
                 </div>
-                <br>
-                <div class="movie-info">
-                    <h3>Unga Mödrar</h3>
-                    <div class="time-genre-row">
-                        <p>Komedi/Drama</p>
-                        <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
-                        <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
-                        <p>2 tim 10 min</p>
+            
+                <div class="movie-card">
+                    <img src="images/sirat.jpg" alt="Sîrat" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
                     </div>
                     <br>
-                    <p>Premiär: 6 Mars 2026</p>
-                    <p>Land: Belgien/Frankrike</p>
-                    <p>Genre: Drama</p>
-                </div>
-                <br>
-                <div class="showtimes">
-                    <button class="showtime"><p>14:00</p></button>
-                    <button class="showtime"><p>17:30</p></button>
-                    <button class="showtime"><p>20:00</p></button>
-                </div>
-            </div>
-        
-            <div class="movie-card">
-                <img src="images/varn.jpeg" alt="Värn" class="movie-poster">
-                <div class="rating-small">
-                    <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
-                    <div class="rating-text-small">
-                        <p>7.9</p>
-                    </div>
-                </div>
-                <br>
-                <div class="movie-info">
-                    <h3>Värn</h3>
-                    <div class="time-genre-row">
-                        <p>Komedi/Drama</p>
-                        <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
-                        <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
-                        <p>2 tim 10 min</p>
+                    <div class="movie-info">
+                        <h3>Sîrat</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 55 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 6 Mars 2026</p>
+                        <p>Land: Frankrike/Spanien</p>
+                        <p>Språk: Spanska</p>
                     </div>
                     <br>
-                    <p>Premiär: 27 Feb 2026</p>
-                    <p>Land: Sverige</p>
-                    <p>Genre: Drama</p>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
                 </div>
-                <br>
-                <div class="showtimes">
-                    <button class="showtime"><p>14:00</p></button>
-                    <button class="showtime"><p>17:30</p></button>
-                    <button class="showtime"><p>20:00</p></button>
+            
+                <div class="movie-card">
+                    <img src="images/ungamodrar.jpg" alt="Unga Mödrar" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Unga Mödrar</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 45 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 6 Mars 2026</p>
+                        <p>Land: Belgien/Frankrike</p>
+                        <p>Språk: Franska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/varn.jpeg" alt="Värn" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Värn</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 21 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 27 Feb 2026</p>
+                        <p>Land: Sverige</p>
+                        <p>Språk: Svenska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+    
+                <div class="movie-card">
+                    <img src="images/begyndelser.jpg" alt="Begynnelser" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Begynnelser</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 36 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 13 Mars 2026</p>
+                        <p>Land: Danmark</p>
+                        <p>Språk: Danska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                    
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/killbill.jpeg" alt="Kill Bill" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Kill Bill: The Whole Bloody Affair</h3>
+                        <div class="time-genre-row">
+                            <p>Action/Thriller</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>4 tim 35 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 13 Mars 2026</p>
+                        <p>Land: USA</p>
+                        <p>Språk: Engelska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/mecenaten.jpg" alt="Mecenaten" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Mecenaten</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 40 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 20 Mars 2026</p>
+                        <p>Land: Sverige</p>
+                        <p>Språk: Svenska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/romeria.jpg" alt="Romería" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Romería</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 55 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 13 Mars 2026</p>
+                        <p>Land: Spanien</p>
+                        <p>Språk: Spanska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+    
+                <div class="movie-card">
+                    <img src="images/sentimental_value.jpg" alt="Sentimental Value" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Sentimental Value</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>2 tim 13 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 26 Sept 2025</p>
+                        <p>Land: Norge</p>
+                        <p>Språk: Norska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                    
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/stalsystrar.jpeg" alt="Stålsystrar" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Stålsystrar - Som Sista Dagen</h3>
+                        <div class="time-genre-row">
+                            <p>Komedi/Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 48 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 27 Feb 2026</p>
+                        <p>Land: Finland</p>
+                        <p>Språk: Finska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/testament.jpg" alt="The Testament Of Ann Lee" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>The Testament Of Ann Lee</h3>
+                        <div class="time-genre-row">
+                            <p>Musikal/Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>2 tim 17 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 20 Mars 2026</p>
+                        <p>Land: USA</p>
+                        <p>Språk Engelska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
+                </div>
+            
+                <div class="movie-card">
+                    <img src="images/tvaaglagare.jpg" alt="Två Åklagare" class="movie-poster">
+                    <div class="rating-small">
+                        <img src="images/imdb-logo-cinema.svg" alt="imdb" class="rating-icon-small">
+                        <div class="rating-text-small">
+                            <p>7.9</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="movie-info">
+                        <h3>Två Åklagare</h3>
+                        <div class="time-genre-row">
+                            <p>Drama</p>
+                            <img src="images/icons/dot-small-svgrepo-com.svg" class="doticon">
+                            <img src="images/icons/clock-0700-svgrepo-com.svg" class="clockicon">
+                            <p>1 tim 57 min</p>
+                        </div>
+                        <br>
+                        <p>Premiär: 20 Mars 2026</p>
+                        <p>Land: Frankrike/Tyskland</p>
+                        <p>Språk: Ryska</p>
+                    </div>
+                    <br>
+                    <div class="showtimes">
+                        <button class="showtime"><p>14:00</p></button>
+                        <button class="showtime"><p>17:30</p></button>
+                        <button class="showtime"><p>20:00</p></button>
+                    </div>
                 </div>
             </div>
+            
         </div>
 
 
