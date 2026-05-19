@@ -9,6 +9,7 @@ body{
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -100,16 +101,111 @@ header {
     display: none;
 }
 
+.menu-link.active {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
 
 .profilikon {
     width: 32px;
     height: auto;
 }
+.profilikon:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
   
 .menu a:hover {
     text-decoration: underline;
 }
+.cinema-btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cinema-btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
 
+.cinema-btn img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+.cinema .cinema-btn img {
+    filter: brightness(0) invert(1);
+}
+
+.cinema {
+    background-color: #111;
+    color: #f1f1f1;
+}
+.cinema .hamburger span {
+    background-color: #fff;
+}
+.cinema header,
+.cinema footer {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #444;
+}
+.cinema .menu li::after {
+    background-color: #fff;
+    opacity: 0.6;
+}
+.cinema .divider {
+    background-color: #222;
+}
+.cinema .hero-text {
+    background-color: #1e1e1e;
+    color: white;
+}
+.cinema .movie-card {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #444;
+}
+.cinema button {
+    background-color: #222;
+    color: white;
+    border: 2px solid white;
+}
+.cinema .menu-link {
+    color: white;
+}
+.cinema .time-genre-row p {
+    color: white;
+}
+.cinema .showtimes .showtime {
+    background-color: #222;
+    color: white;
+    border: 2px solid white;
+}
+.cinema .showtimes .showtime:hover {
+    background-color: white;
+    color: black;
+}
+.cinema .arrowicon,
+.cinema .infoicon,
+.cinema .doticon,
+.cinema .profilikon,
+.cinema .list-icon,
+.cinema .icon-box,
+.cinema .clockicon {
+    filter: brightness(0) invert(1);
+}
+.cinema .footer-links a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.cinema .footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
 .logga-hemsida {
     width: auto;
@@ -298,6 +394,10 @@ video::cue {
     width: 40px;
     height: 40px;
 }
+.info-button:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
 
 .buy-button:hover {
     background-color: #fff;
@@ -375,6 +475,9 @@ img {
 .arrow-box:hover {
     background-color: #000;
     color: #fff;
+}
+.arrow-box:hover .arrowicon {
+    filter: brightness(0) invert(1);
 }
 .arrow-box:focus-visible {
     outline: 2px solid #005fa3;
