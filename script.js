@@ -1,7 +1,7 @@
 // Task 1
-function showMessage() {
+/*function showMessage() {
     alert("Hello, JavaScript!");
-}
+}*/
 
 // Task 2
 const movieRow = document.getElementById("movieRow");
@@ -54,6 +54,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 function toggleCinemaMode() {
     document.body.classList.toggle("cinema");
 }
+
+//Task 4
+$(document).ready(function () {
+    $(".movie-card").on("mouseenter", function () {
+        $(".movie-card")
+            .not(this)
+            .stop(true)
+            .fadeTo(250, 0.4);
+
+        $(this)
+            .stop(true)
+            .fadeTo(250, 1);
+    });
+
+    $(".movie-card").on("mouseleave", function () {
+        $(".movie-card")
+            .stop(true)
+            .fadeTo(250, 1);
+    });
+});
+
+
+$(document).ready(function () {
+
+    $(".dropdown-toggle").on("click", function (e) {
+        e.preventDefault();
+
+        $(this)
+            .siblings(".submenu")
+            .slideToggle(250);
+    });
+
+});

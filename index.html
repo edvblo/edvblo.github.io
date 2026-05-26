@@ -7,6 +7,7 @@
     <title>Folkets Bio</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="page-home">
     <header>
@@ -21,7 +22,14 @@
             <ul class="menu">
                 <li><a href="filmer.html" class="menu-link">Filmer</a></li>
                 <li><a href="event.html" class="menu-link">Evenemang</a></li>
-                <li><a href="smafolketsbio.html" class="menu-link">Barn & Ungdom</a></li>
+                <li class="dropdown">
+                    <a href="smafolketsbio.html" class="menu-link dropdown-toggle">Barn & Ungdom</a>
+                
+                    <ul class="submenu">
+                        <li><a href="smafolketsbio.html">Knattebio</a></li>
+                        <li><a href="#">Skolbio</a></li>
+                    </ul>
+                </li>
                 <li><a href="om-oss.html" class="menu-link">Om oss</a></li>
                 <li><a href="hitta-oss.html" class="menu-link">Hitta oss</a></li>
             </ul>
